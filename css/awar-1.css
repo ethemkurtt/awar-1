@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ===== ELEMENTOR OVERRIDE ===== */
+.e-con>.e-con-inner {
+    margin: 0 !important;
+    max-width: 100% !important;
+    gap: 0 !important;
+}
+
+.elementor-element.e-con {
+    padding: 0 !important;
+}
+
+.e-con-inner {
+    padding: 0 !important;
+}
+
+/* ===== RESET ===== */
+.aw-header *,
+.aw-header *::before,
+.aw-header *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.aw-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+    height: 96px !important;
+    background: rgba(0, 51, 102, 0.20) !important;
+    transform: translateY(0);
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.aw-header.is-hidden {
+    transform: translateY(-100%);
+}
+
+.aw-header.is-scrolled {
+    background: rgba(0, 51, 102, 0.85) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.aw-header__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logo */
+.aw-header__logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.aw-header__logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+/* CTA Button (right side) */
+.aw-header__cta {
+    display: flex;
+    height: 48px;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    background: rgba(254, 254, 254, 0.20);
+    color: #FEFEFE;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.aw-header__cta:hover {
+    background: rgba(254, 254, 254, 0.30);
+    transform: translateY(-1px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .aw-header {
+        height: 64px !important;
+        background: linear-gradient(180deg, rgba(0, 51, 102, 0.20) 21.3%, rgba(0, 51, 102, 0.10) 79.81%, rgba(0, 51, 102, 0.00) 100%) !important;
+    }
+
+    .aw-header__inner {
+        padding: 0 16px;
+        gap: 12px;
+    }
+
+    .aw-header__logo img {
+        height: 24px;
+    }
+
+    .aw-header__cta {
+        height: 40px;
+        padding: 10px 16px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+}
