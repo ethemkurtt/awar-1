@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '.aw-hero__cta',
             '.aw-results__cta',
             '.aw-tech__cta',
+            '.aw-solution__cta-btn',
             '.aw-cta',
             '.ek-faq__answer-cta'
         ].join(',');
