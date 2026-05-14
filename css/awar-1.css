@@ -157,11 +157,12 @@
 }
 
 .aw-hero__badge-text {
-    color: #FEFEFE;
+    color: #F98755;
     font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
+    font-style: normal;
     font-weight: 600;
-    line-height: 1;
+    line-height: 20px;
 }
 
 /* Title */
@@ -242,6 +243,7 @@
 /* Trust logos: infinite marquee */
 .aw-hero__trust {
     width: 100%;
+    max-width: 500px;
     margin-top: 8px;
     overflow: hidden;
     padding: 10px 0;
@@ -273,47 +275,46 @@
 /* Right - Image with overlay card */
 .aw-hero__right {
     position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 560px;
-    align-self: stretch;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 96px 0 32px;
 }
 
 .aw-hero__media {
     position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 520px;
-    border-radius: 16px;
+    width: 463.801px;
+    height: 620.092px;
+    border-radius: 12px;
     overflow: hidden;
+    background-image: url('https://lp.elithair.com.tr/wp-content/uploads/2026/05/goersel_2026-05-14_094831464.png');
+    background-color: lightgray;
+    background-position: -17.98px -26.279px;
+    background-size: 107.952% 107.658%;
+    background-repeat: no-repeat;
 }
 
+/* Hide img element since background does the work */
 .aw-hero__image {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-    inset: 0;
+    display: none !important;
 }
 
 /* Overlay card */
 .aw-hero__card {
     position: absolute;
     bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background: rgba(15, 35, 65, 0.85);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 401.2px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border-radius: 12px;
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
 }
 
 .aw-hero__card-icon {
@@ -324,26 +325,25 @@
 }
 
 .aw-hero__card-text {
-    flex: 1;
-    min-width: 0;
+    width: 100%;
 }
 
 .aw-hero__card-title {
     color: #FEFEFE;
     font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.3;
     margin: 0;
 }
 
 .aw-hero__card-desc {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.75);
     font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.4;
-    margin: 4px 0 0;
+    margin: 6px 0 0;
 }
 
 /* ===== RESPONSIVE ===== */
