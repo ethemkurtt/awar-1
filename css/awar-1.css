@@ -361,6 +361,86 @@
 }
 
 /* ============================================
+   TOUR SECTION (Saç Analiziniz Böyle Yapılıyor)
+   ============================================ */
+.aw-tour {
+    background: #FFFFFF;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.aw-tour__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.aw-tour__title {
+    color: #003366;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.aw-tour__desc {
+    color: #6E6E6E;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 28px;
+}
+
+.aw-tour__embed {
+    width: 1280px;
+    max-width: 100%;
+    height: 670.152px;
+    aspect-ratio: 170 / 89;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.aw-tour__embed > div,
+.aw-tour__embed iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .aw-tour {
+        padding: 50px 0;
+    }
+    .aw-tour__inner {
+        padding: 0 20px;
+    }
+    .aw-tour__title {
+        font-size: 26px;
+    }
+    .aw-tour__desc {
+        font-size: 14px;
+    }
+    .aw-tour__embed {
+        height: auto;
+        min-height: 240px;
+        border-radius: 12px;
+    }
+}
+
+/* ============================================
    SOLUTION SECTION (Peki Çözüm Ne?)
    ============================================ */
 .aw-solution {

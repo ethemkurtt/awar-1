@@ -60,6 +60,29 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('resize', apply);
     })();
 
+    /* ===== CLOUDPANO TOUR RELOADER =====
+       Re-injects the CloudPano script with a cache-busting param so the tour
+       reliably initializes on every page load (Elementor cache safe).
+    */
+    document.querySelectorAll('.aw-tour__embed-target').forEach(function (target) {
+        const shortId = target.getAttribute('data-short');
+        if (!shortId) return;
+
+        target.id = shortId;
+        target.innerHTML = '';
+
+        const s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.setAttribute('data-short', shortId);
+        s.setAttribute('data-path', 'tours');
+        s.setAttribute('data-is-self-hosted', 'undefined');
+        s.setAttribute('width', '100%');
+        s.setAttribute('height', '100%');
+        s.src = 'https://app.cloudpano.com/public/shareScript.js?_=' + Date.now();
+        target.appendChild(s);
+    });
+
     /* ===== HEADER SCROLL ===== */
     const header = document.querySelector('.aw-header');
     if (header) {
