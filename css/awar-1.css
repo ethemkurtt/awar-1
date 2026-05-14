@@ -1670,14 +1670,28 @@
         gap: 12px;
     }
 
+    /* Hide the text-to-bottom divider on mobile; we'll put one between verified and author */
+    .aw-trust__review-divider {
+        display: none;
+    }
+
     .aw-trust__review-bottom {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+        align-items: center;
+        gap: 14px;
     }
 
     .aw-trust__review-verified {
+        order: 1;
         align-self: center;
+    }
+
+    .aw-trust__review-author {
+        order: 2;
+        width: 100%;
+        padding-top: 14px;
+        border-top: 1px solid #E5E5E5;
+        justify-content: flex-start;
     }
 
     .aw-trust__arrow {
