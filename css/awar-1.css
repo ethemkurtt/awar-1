@@ -734,6 +734,535 @@
 }
 
 /* ============================================
+   FINAL CTA SECTION (Saç Ekimi İçin Uygun Musunuz?)
+   ============================================ */
+.aw-final {
+    background: linear-gradient(119deg, #036 0%, #001A33 100%);
+    padding: 64px 336px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.aw-final__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 768px;
+}
+
+/* Badge: same style as hero badge */
+.aw-final__badge {
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.aw-final__badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #F98755;
+    flex-shrink: 0;
+}
+
+.aw-final__badge-text {
+    color: #F98755;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+/* Title: same style as hero */
+.aw-final__title {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.aw-final__title-white {
+    color: #FEFEFE;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.aw-final__title-orange {
+    color: #F98755;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+/* Description */
+.aw-final__desc {
+    color: #F1F8FE;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+    max-width: 520px;
+}
+
+/* CTA Button */
+.aw-final__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px;
+    padding: 16px 32px;
+    border-radius: 12px;
+    background: #F98755;
+    color: #FEFEFE;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.aw-final__cta:hover {
+    background: #003366;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* Security note (lock icon + text) */
+.aw-final__security {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #FBFBFB;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.055px;
+}
+
+.aw-final__security svg {
+    flex-shrink: 0;
+}
+
+/* 3 small feature badges */
+.aw-final__badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.aw-final__feature-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #FEFEFE;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* ============================================
+   FOOTER SECTION (copied 1:1 from fiyat-teklifi)
+   ============================================ */
+.site-footer {
+    background: #003366;
+    width: 100%;
+    padding: 96px 100px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.site-footer__inner {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.site-footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+
+.site-footer__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    color: #FFFFFF;
+    min-width: 0;
+}
+
+.site-footer__badge {
+    display: none;
+}
+
+.site-footer__logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 0 120px;
+}
+
+.site-footer__logo img {
+    height: 36px !important;
+    width: auto !important;
+    max-width: none !important;
+    display: block;
+}
+
+.site-footer__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.site-footer__title {
+    color: #FFFFFF;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.site-footer__desc {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 480px;
+}
+
+.site-footer__contacts {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.site-footer__contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.site-footer__contact:hover {
+    opacity: 0.8;
+}
+
+.site-footer__contact svg {
+    flex-shrink: 0;
+    color: #FFFFFF;
+}
+
+.site-footer__contact-sep {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.site-footer__map {
+    position: relative;
+    width: 429px;
+    height: 429px;
+    border-radius: 11.216px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: lightgray 0.436px 0.265px / 113.508% 100% no-repeat;
+}
+
+.site-footer__map iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
+}
+
+.site-footer__map-button {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #003366;
+    color: #FFFFFF;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    z-index: 2;
+}
+
+.site-footer__map-button:hover {
+    background: #002244;
+}
+
+.site-footer__map-button svg {
+    flex-shrink: 0;
+}
+
+.site-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    flex-wrap: wrap;
+}
+
+.site-footer__copy {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.site-footer__social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.site-footer__social a {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.site-footer__social a:hover {
+    color: #FFFFFF;
+}
+
+@media (max-width: 1100px) {
+    .site-footer {
+        padding: 60px 36px;
+    }
+    .site-footer__top {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .site-footer__map {
+        width: 100%;
+        max-width: 429px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    .site-footer__logo {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Final CTA mobile */
+    .aw-final {
+        padding: 48px 24px;
+    }
+    .aw-final__inner {
+        gap: 20px;
+    }
+    .aw-final__title-white,
+    .aw-final__title-orange {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .aw-final__desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .aw-final__cta {
+        width: 100%;
+        max-width: 100%;
+    }
+    .aw-final__security {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .aw-final__badges {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .aw-final__feature-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    /* Footer mobile */
+    .site-footer {
+        padding: 40px 24px 32px;
+    }
+
+    .site-footer__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .site-footer__top,
+    .site-footer__left,
+    .site-footer__bottom {
+        display: contents;
+    }
+
+    .site-footer__logo {
+        order: 1;
+        margin: 0 0 24px;
+    }
+
+    .site-footer__logo img {
+        height: 32px !important;
+    }
+
+    .site-footer__intro {
+        order: 2;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .site-footer__title {
+        font-size: 18px;
+    }
+
+    .site-footer__desc {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .site-footer__contacts {
+        order: 3;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0 0 18px;
+    }
+
+    .site-footer__contact {
+        justify-content: center;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .site-footer__contact[href^="mailto"] span {
+        text-decoration: underline;
+    }
+
+    .site-footer__contact-sep {
+        display: none;
+    }
+
+    .site-footer__social {
+        order: 4;
+        list-style: none;
+        margin: 0 0 24px;
+        padding: 18px 0 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .site-footer__social li {
+        padding: 0 14px;
+        border-right: 1px solid rgba(255, 255, 255, 0.28);
+        line-height: 1;
+    }
+
+    .site-footer__social li:last-child {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .site-footer__social li:first-child {
+        padding-left: 0;
+    }
+
+    .site-footer__social a {
+        font-size: 14px;
+        text-decoration: underline;
+    }
+
+    .site-footer__map {
+        order: 5;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 0 24px;
+    }
+
+    .site-footer__copy {
+        order: 6;
+        text-align: left;
+        font-size: 13px;
+        padding: 20px 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* ============================================
    FAQ SECTION (Sıkça Sorulan Sorular)
    ============================================ */
 .ek-faq {

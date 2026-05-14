@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '.aw-results__cta',
             '.aw-tech__cta',
             '.aw-solution__cta-btn',
+            '.aw-final__cta',
             '.aw-cta',
             '.ek-faq__answer-cta',
             '.ft-results__cta'
