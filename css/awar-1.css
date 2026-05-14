@@ -360,6 +360,161 @@
     margin: 0;
 }
 
+/* ============================================
+   FACTS SECTION (Kimsenin Söylemediği 4 Gerçek)
+   ============================================ */
+.aw-facts {
+    background: #FFFFFF;
+    padding: 80px 100px;
+    width: 100%;
+}
+
+.aw-facts__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.aw-facts__title {
+    color: #003366;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0 0 14px;
+}
+
+.aw-facts__subtitle {
+    color: #6E6E6E;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 48px;
+}
+
+/* Grid: 2x2 on web */
+.aw-facts__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Card */
+.aw-facts__card {
+    display: flex;
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid #EFEFEF;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(10, 13, 18, 0.06);
+}
+
+/* Top row: icon left + badge right */
+.aw-facts__card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+/* Icon wrapper */
+.aw-facts__card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.aw-facts__card-icon--blue {
+    background: #EFF6FF;
+}
+
+.aw-facts__card-icon--green {
+    background: #ECFDF5;
+}
+
+.aw-facts__card-icon--orange {
+    background: #FFF7ED;
+}
+
+.aw-facts__card-icon--red {
+    background: #FFF5F5;
+}
+
+.aw-facts__card-icon svg {
+    display: block;
+}
+
+/* Card icons that come with their own 56x56 rect: render at full size */
+.aw-facts__card-icon--standalone {
+    background: transparent;
+    width: 56px;
+    height: 56px;
+}
+
+/* Badge */
+.aw-facts__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.aw-facts__badge--red {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.aw-facts__badge--orange {
+    background: #FFEDD5;
+    color: #EA580C;
+}
+
+.aw-facts__badge--yellow {
+    background: #FEF3C7;
+    color: #A16207;
+}
+
+/* Card content */
+.aw-facts__card-title {
+    color: #111111;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.aw-facts__card-desc {
+    color: #5A5A5A;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .aw-header {
@@ -526,5 +681,55 @@
     .aw-hero__trust-track img {
         height: 22px !important;
         max-height: 22px !important;
+    }
+
+    /* ================ FACTS MOBILE ================ */
+    .aw-facts {
+        padding: 50px 20px;
+    }
+
+    .aw-facts__title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .aw-facts__subtitle {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 28px;
+    }
+
+    .aw-facts__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .aw-facts__card {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .aw-facts__card-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .aw-facts__card-icon--standalone {
+        width: 48px;
+        height: 48px;
+    }
+
+    .aw-facts__card-icon--standalone svg {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .aw-facts__card-title {
+        font-size: 17px;
+    }
+
+    .aw-facts__card-desc {
+        font-size: 13px;
+        line-height: 20px;
     }
 }
