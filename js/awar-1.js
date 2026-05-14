@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         initArrowSlider('.ft-results__track', '.ft-results__prev', '.ft-results__next', '.ft-results__card', 24);
+        initArrowSlider('.aw-trust__track', '.aw-trust__prev', '.aw-trust__next', '.aw-trust__review', 24);
     })();
 
     /* ===== HEADER SCROLL ===== */

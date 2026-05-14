@@ -734,6 +734,273 @@
 }
 
 /* ============================================
+   TRUST SECTION (Binlerce Mutlu Hasta, Tek Bir Seçim)
+   ============================================ */
+.aw-trust {
+    background: #FFFFFF;
+    padding: 80px 0 60px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.aw-trust__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.aw-trust__title {
+    color: #003366;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Top: 2 small score cards */
+.aw-trust__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.aw-trust__top-card {
+    width: 288px;
+    height: 110px;
+    border-radius: 12px;
+    border: 1px solid #EFEFEF;
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(10, 13, 18, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+}
+
+.aw-trust__top-card-icon {
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.aw-trust__top-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.aw-trust__top-card-score {
+    color: #003366;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.aw-trust__top-card-score--excellent {
+    color: #15803D;
+    font-family: "Inter", 'Plus Jakarta Sans', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.027px;
+}
+
+.aw-trust__top-card-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.aw-trust__top-card-stars svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.aw-trust__top-card-label {
+    color: #9CA3AF;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Slider */
+.aw-trust__slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.aw-trust__track-wrap {
+    overflow: hidden;
+    flex: 1;
+}
+
+.aw-trust__track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Review card */
+.aw-trust__review {
+    width: 394px;
+    height: 257px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #EFEFEF;
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(10, 13, 18, 0.04);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.aw-trust__review-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aw-trust__review-top svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.aw-trust__review-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.aw-trust__review-text {
+    color: #6E6E6E;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22.75px;
+    margin: 0;
+    flex: 1;
+}
+
+.aw-trust__review-divider {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: #EFEFEF;
+    margin: 0;
+}
+
+.aw-trust__review-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.aw-trust__review-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.aw-trust__review-photo {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    flex-shrink: 0;
+}
+
+.aw-trust__review-author-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.aw-trust__review-name {
+    color: #003366;
+    font-family: "Inter", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.aw-trust__review-location {
+    color: #6E6E6E;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.aw-trust__review-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #DCFCE7;
+    color: #16A34A;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    white-space: nowrap;
+}
+
+.aw-trust__review-verified svg {
+    flex-shrink: 0;
+}
+
+/* Arrows */
+.aw-trust__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.aw-trust__arrow:hover {
+    opacity: 0.6;
+}
+
+.aw-trust__arrow svg {
+    display: block;
+}
+
+/* ============================================
    RESULTS SECTION (Gerçek Hastalar, Gerçek Sonuçlar)
    ============================================ */
 .ft-results {
@@ -1306,6 +1573,96 @@
 
     .aw-solution__stat-label {
         font-size: 11px;
+    }
+
+    /* ================ TRUST MOBILE ================ */
+    .aw-trust {
+        padding: 50px 0 40px;
+    }
+
+    .aw-trust__inner {
+        padding: 0 16px;
+        gap: 20px;
+    }
+
+    .aw-trust__title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .aw-trust__top {
+        gap: 12px;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .aw-trust__top-card {
+        width: calc(50% - 6px);
+        max-width: 180px;
+        height: auto;
+        min-height: 90px;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .aw-trust__top-card-icon {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .aw-trust__top-card-score,
+    .aw-trust__top-card-score--excellent {
+        font-size: 18px;
+    }
+
+    .aw-trust__top-card-label {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .aw-trust__top-card-stars svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    /* Slider mobile: single review card */
+    .aw-trust__slider {
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aw-trust__track-wrap {
+        flex: 0 1 280px;
+    }
+
+    .aw-trust__review {
+        width: 280px !important;
+        height: auto;
+        min-height: 280px;
+        padding: 20px;
+        gap: 12px;
+    }
+
+    .aw-trust__review-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .aw-trust__review-verified {
+        align-self: center;
+    }
+
+    .aw-trust__arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .aw-trust__arrow svg {
+        width: 36px !important;
+        height: 36px !important;
     }
 
     /* ================ RESULTS MOBILE ================ */
