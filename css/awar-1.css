@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* ===== ELEMENTOR OVERRIDE ===== */
 .e-con>.e-con-inner {
@@ -420,6 +420,77 @@
     display: block;
 }
 
+/* Steps (3-step process below embed) */
+.aw-tour__steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1240px;
+    margin-top: 60px;
+}
+
+.aw-tour__step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    max-width: 300px;
+}
+
+.aw-tour__step-num {
+    color: #E8913A;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 0;
+}
+
+.aw-tour__step-icon {
+    display: block;
+}
+
+.aw-tour__step-icon svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.aw-tour__step-title {
+    color: #2E3033;
+    font-family: "Inter", "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0;
+}
+
+.aw-tour__step-desc {
+    color: #6E6E6E;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
+
+.aw-tour__step-arrow {
+    flex-shrink: 0;
+    margin-top: 92px;
+    display: flex;
+    align-items: center;
+}
+
+.aw-tour__step-arrow svg {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .aw-tour {
         padding: 50px 0;
@@ -437,6 +508,41 @@
         height: auto;
         min-height: 240px;
         border-radius: 12px;
+    }
+
+    /* Steps mobile: stacked vertical with rotated arrows */
+    .aw-tour__steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-top: 40px;
+    }
+
+    .aw-tour__step {
+        max-width: 280px;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .aw-tour__step-num {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .aw-tour__step-title {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .aw-tour__step-desc {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .aw-tour__step-arrow {
+        margin: 0;
+        transform: rotate(90deg);
     }
 }
 
