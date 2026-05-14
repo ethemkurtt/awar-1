@@ -744,9 +744,9 @@
 }
 
 .aw-trust__inner {
-    max-width: 1280px;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 0 36px;
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -839,24 +839,31 @@
     line-height: 20px;
 }
 
-/* Slider */
+/* Slider - on web: 3 cards centered, no sliding; on mobile: arrow slider */
 .aw-trust__slider {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     width: 100%;
 }
 
 .aw-trust__track-wrap {
-    overflow: hidden;
-    flex: 1;
+    overflow: visible;
+    flex: 0 0 auto;
 }
 
 .aw-trust__track {
     display: flex;
     gap: 24px;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+}
+
+/* Arrows: hidden on web, shown on mobile */
+.aw-trust__arrow {
+    display: none;
 }
 
 /* Review card */
@@ -977,9 +984,8 @@
     flex-shrink: 0;
 }
 
-/* Arrows */
+/* Arrow base (display controlled per viewport) */
 .aw-trust__arrow {
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
@@ -1634,7 +1640,12 @@
     }
 
     .aw-trust__track-wrap {
+        overflow: hidden;
         flex: 0 1 280px;
+    }
+
+    .aw-trust__track {
+        justify-content: flex-start;
     }
 
     .aw-trust__review {
@@ -1656,6 +1667,7 @@
     }
 
     .aw-trust__arrow {
+        display: flex;
         width: 36px;
         height: 36px;
     }
