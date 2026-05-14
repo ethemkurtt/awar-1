@@ -500,12 +500,13 @@
 }
 
 .aw-solution__image {
-    height: 388px !important;
-    flex: 1 0 0;
-    width: 100% !important;
+    width: 390px !important;
+    height: 390px !important;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 12px;
     display: block;
+    align-self: center;
 }
 
 .aw-solution__stats {
