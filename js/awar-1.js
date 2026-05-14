@@ -61,12 +61,26 @@ document.addEventListener('DOMContentLoaded', function () {
     })();
 
     /* ===== CLOUDPANO TOUR RELOADER =====
-       Re-injects the CloudPano script with a cache-busting param so the tour
-       reliably initializes on every page load (Elementor cache safe).
+       Handles both styles:
+       1) Direct embed: <div id="ZG9Kfnctn"><script data-short=... src=shareScript.js></script></div>
+       2) Targeted: <div class="aw-tour__embed-target" data-short="ZG9Kfnctn"></div>
+       Re-injects script with cache-busting so the tour reliably initializes.
     */
-    document.querySelectorAll('.aw-tour__embed-target').forEach(function (target) {
-        const shortId = target.getAttribute('data-short');
-        if (!shortId) return;
+    document.querySelectorAll('.aw-tour__embed').forEach(function (container) {
+        let target = container.querySelector('.aw-tour__embed-target[data-short]');
+        let shortId = null;
+
+        if (target) {
+            shortId = target.getAttribute('data-short');
+        } else {
+            const inner = container.querySelector('script[data-short]');
+            if (inner) {
+                shortId = inner.getAttribute('data-short');
+                target = inner.parentElement;
+            }
+        }
+
+        if (!target || !shortId) return;
 
         target.id = shortId;
         target.innerHTML = '';
