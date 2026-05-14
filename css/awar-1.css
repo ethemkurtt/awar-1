@@ -96,12 +96,13 @@
     text-decoration: none;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
     white-space: nowrap;
 }
 
 .aw-header__cta:hover {
-    background: rgba(254, 254, 254, 0.30);
+    background: #003366;
+    color: #FFFFFF;
     transform: translateY(-1px);
 }
 
