@@ -98,6 +98,44 @@ document.addEventListener('DOMContentLoaded', function () {
         target.appendChild(s);
     });
 
+    /* ===== FAQ ACCORDION =====
+       button-based accordion (max-height transition + first item open by default)
+    */
+    (function () {
+        var items = document.querySelectorAll('.ek-faq__item');
+        if (!items.length) return;
+
+        items.forEach(function (item) {
+            var question = item.querySelector('.ek-faq__question');
+            var answer = item.querySelector('.ek-faq__answer');
+            if (!question || !answer) return;
+
+            question.addEventListener('click', function () {
+                var isOpen = item.classList.contains('active');
+
+                items.forEach(function (i) {
+                    i.classList.remove('active');
+                    var a = i.querySelector('.ek-faq__answer');
+                    if (a) a.style.maxHeight = '0';
+                });
+
+                if (!isOpen) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        var first = items[0];
+        if (first) {
+            first.classList.add('active');
+            var firstAnswer = first.querySelector('.ek-faq__answer');
+            if (firstAnswer) {
+                firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+            }
+        }
+    })();
+
     /* ===== ARROW SLIDER (results) - dynamic visibleCards ===== */
     (function () {
         function initArrowSlider(trackSel, prevSel, nextSel, cardSel, gap) {
