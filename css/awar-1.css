@@ -141,8 +141,8 @@
 .aw-hero__left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 24px;
+    justify-content: flex-start;
+    gap: 18px;
     padding: 140px 0 60px;
 }
 
@@ -224,7 +224,7 @@
 .aw-hero__features {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
     flex-wrap: wrap;
 }
 
@@ -264,14 +264,14 @@
 .aw-hero__trust-track {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 32px;
     width: max-content;
     animation: awHeroTrustScroll 28s linear infinite;
 }
 
 .aw-hero__trust-track img {
-    height: 40px !important;
-    max-height: 40px !important;
+    height: 32px !important;
+    max-height: 32px !important;
     width: auto !important;
     flex: 0 0 auto;
     opacity: 0.85;
