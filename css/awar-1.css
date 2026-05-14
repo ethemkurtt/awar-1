@@ -734,6 +734,93 @@
 }
 
 /* ============================================
+   WHY SECTION (Neden ElitHair Sizin İçin En İyi Tercih?)
+   ============================================ */
+.aw-why {
+    background: #FBFBFB;
+    padding: 80px 36px;
+    width: 100%;
+}
+
+.aw-why__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.aw-why__title {
+    color: #003366;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 14px;
+}
+
+.aw-why__subtitle {
+    color: #6E6E6E;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 40px;
+}
+
+.aw-why__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.aw-why__card {
+    display: flex;
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+    min-height: 144px;
+    border-radius: 12px;
+    border: 1px solid #EFEFEF;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(10, 13, 18, 0.06);
+}
+
+.aw-why__card-icon {
+    flex-shrink: 0;
+    display: block;
+}
+
+.aw-why__card-icon svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.aw-why__card-title {
+    color: #2E3033;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0;
+}
+
+.aw-why__card-desc {
+    color: #6E6E6E;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
+
+/* ============================================
    TRUST SECTION (Binlerce Mutlu Hasta, Tek Bir Seçim)
    ============================================ */
 .aw-trust {
@@ -1579,6 +1666,48 @@
 
     .aw-solution__stat-label {
         font-size: 11px;
+    }
+
+    /* ================ WHY MOBILE ================ */
+    .aw-why {
+        padding: 50px 16px;
+    }
+
+    .aw-why__title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .aw-why__subtitle {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 28px;
+    }
+
+    .aw-why__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .aw-why__card {
+        padding: 16px;
+        min-height: auto;
+        gap: 8px;
+    }
+
+    .aw-why__card-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .aw-why__card-title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .aw-why__card-desc {
+        font-size: 12px;
+        line-height: 17px;
     }
 
     /* ================ TRUST MOBILE ================ */
