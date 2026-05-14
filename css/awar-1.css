@@ -734,6 +734,157 @@
 }
 
 /* ============================================
+   RESULTS SECTION (Gerçek Hastalar, Gerçek Sonuçlar)
+   ============================================ */
+.ft-results {
+    background: #FFFFFF;
+    padding: 80px 0 60px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ft-results__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 36px;
+}
+
+.ft-results__title {
+    color: #003366;
+    text-align: center;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+
+.ft-results__title span {
+    color: #F98755;
+}
+
+.ft-results__slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ft-results__track-wrap {
+    overflow: hidden;
+    flex: 1;
+}
+
+.ft-results__track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ft-results__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    width: calc(50% - 12px);
+}
+
+.ft-results__card-img {
+    max-width: 498px !important;
+    width: 100% !important;
+    height: 607px !important;
+    border-radius: 12px !important;
+    object-fit: cover !important;
+    display: block;
+    background: lightgray 50% / cover no-repeat;
+}
+
+.ft-results__card-name {
+    color: #003366;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.ft-results__card-grafts {
+    color: #003366;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ft-results__card-time {
+    color: #003366;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ft-results__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ft-results__arrow:hover {
+    opacity: 0.6;
+}
+
+.ft-results__arrow svg {
+    display: block;
+}
+
+.ft-results__cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.ft-results__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 372px;
+    padding: 16px 32px;
+    border-radius: 12px;
+    background: #F98755;
+    color: #FEFEFE;
+    font-family: "Sofia Pro", 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.ft-results__cta:hover {
+    background: #003366;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* ============================================
    FACTS SECTION (Kimsenin Söylemediği 4 Gerçek)
    ============================================ */
 .aw-facts {
@@ -1155,6 +1306,60 @@
 
     .aw-solution__stat-label {
         font-size: 11px;
+    }
+
+    /* ================ RESULTS MOBILE ================ */
+    .ft-results {
+        padding: 50px 0 40px;
+    }
+
+    .ft-results__inner {
+        padding: 0 12px;
+    }
+
+    .ft-results__title {
+        font-size: 28px;
+    }
+
+    .ft-results__title span {
+        display: block;
+    }
+
+    .ft-results__slider {
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ft-results__track-wrap {
+        flex: 0 1 267px;
+    }
+
+    .ft-results__card {
+        width: 267px !important;
+        flex-shrink: 0;
+        gap: 8px;
+    }
+
+    .ft-results__card-img {
+        width: 267px !important;
+        max-width: 267px !important;
+        height: 325px !important;
+    }
+
+    .ft-results__arrow {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+
+    .ft-results__arrow svg {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .ft-results__cta {
+        width: 100%;
     }
 
     /* ================ FACTS MOBILE ================ */

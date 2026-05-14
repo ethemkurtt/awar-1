@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '.aw-tech__cta',
             '.aw-solution__cta-btn',
             '.aw-cta',
-            '.ek-faq__answer-cta'
+            '.ek-faq__answer-cta',
+            '.ft-results__cta'
         ].join(',');
 
         document.querySelectorAll(selectors).forEach(function (el) {
@@ -96,6 +97,52 @@ document.addEventListener('DOMContentLoaded', function () {
         s.src = 'https://app.cloudpano.com/public/shareScript.js?_=' + Date.now();
         target.appendChild(s);
     });
+
+    /* ===== ARROW SLIDER (results) - dynamic visibleCards ===== */
+    (function () {
+        function initArrowSlider(trackSel, prevSel, nextSel, cardSel, gap) {
+            const track = document.querySelector(trackSel);
+            const prevBtn = document.querySelector(prevSel);
+            const nextBtn = document.querySelector(nextSel);
+            if (!track || !prevBtn || !nextBtn) return;
+
+            const cards = track.querySelectorAll(cardSel);
+            let current = 0;
+
+            function getVisible() {
+                const card = cards[0];
+                const wrap = track.parentElement;
+                if (!card || !wrap) return 1;
+                const step = card.offsetWidth + gap;
+                return Math.max(1, Math.floor((wrap.offsetWidth + gap) / step));
+            }
+
+            function getMaxIndex() {
+                return Math.max(0, cards.length - getVisible());
+            }
+
+            function update() {
+                const card = cards[0];
+                if (!card) return;
+                const max = getMaxIndex();
+                if (current > max) current = max;
+                const step = card.offsetWidth + gap;
+                track.style.transform = 'translateX(-' + (current * step) + 'px)';
+            }
+
+            nextBtn.addEventListener('click', function () {
+                if (current < getMaxIndex()) { current++; update(); }
+            });
+
+            prevBtn.addEventListener('click', function () {
+                if (current > 0) { current--; update(); }
+            });
+
+            window.addEventListener('resize', update);
+        }
+
+        initArrowSlider('.ft-results__track', '.ft-results__prev', '.ft-results__next', '.ft-results__card', 24);
+    })();
 
     /* ===== HEADER SCROLL ===== */
     const header = document.querySelector('.aw-header');
