@@ -28,6 +28,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     })();
 
+    /* ===== HERO BADGE MOBILE/DESKTOP MOVE =====
+       On mobile, move .aw-hero__badge inside .aw-hero__media so it can be
+       absolutely positioned at top-left of the image. Restore on desktop.
+    */
+    (function () {
+        const badge = document.querySelector('.aw-hero__badge');
+        const media = document.querySelector('.aw-hero__media');
+        const left  = document.querySelector('.aw-hero__left');
+        if (!badge || !media || !left) return;
+
+        const titleInLeft = left.querySelector('.aw-hero__title');
+        const originalParent = left;
+        const originalNextSibling = titleInLeft;
+
+        function apply() {
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+            if (isMobile) {
+                if (badge.parentElement !== media) {
+                    media.insertBefore(badge, media.firstChild);
+                }
+            } else {
+                if (badge.parentElement !== originalParent) {
+                    originalParent.insertBefore(badge, originalNextSibling);
+                }
+            }
+        }
+
+        apply();
+        window.addEventListener('resize', apply);
+    })();
+
     /* ===== HEADER SCROLL ===== */
     const header = document.querySelector('.aw-header');
     if (header) {
